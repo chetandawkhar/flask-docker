@@ -7,7 +7,3 @@ def welcome():
     return render_template(
         "home.html"
     )
-
-
-app.run(port=5000)
-
