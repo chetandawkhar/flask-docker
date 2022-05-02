@@ -11,5 +11,4 @@ COPY flaskapp /opt/
 RUN pip3 install -r requirements.txt
 WORKDIR /opt/
 
-CMD ["/usr/local/bin/gunicorn","-b","0:0:0:0:8000","app:app","--workers"]
-#CMD /usr/local/bin/gunicorn --access-logfile - --error-logfile - -b :8000 app:app
+CMD ["gunicorn3", "-b","0.0.0.0:8000", "app:app", "--workers=5"]
